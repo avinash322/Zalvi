@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2020 11:36:46 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.Zalvi.entity.Transaksi" table="transaksi" catalog="db_zalvi" optimistic-lock="version">
+        <id name="idTransaksi" type="java.lang.Integer">
+            <column name="idTransaksi" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="item" class="com.Zalvi.entity.Item" fetch="select">
+            <column name="Item_idItem" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="com.Zalvi.entity.User" fetch="select">
+            <column name="User_idUser" not-null="true" />
+        </many-to-one>
+        <property name="tanggalTransaksi" type="date">
+            <column name="tanggal_transaksi" length="10" not-null="true" />
+        </property>
+        <property name="namaItem" type="string">
+            <column name="nama_item" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

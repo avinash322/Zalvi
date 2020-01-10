@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2020 11:36:46 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.Zalvi.entity.Item" table="item" catalog="db_zalvi" optimistic-lock="version">
+        <id name="idItem" type="int">
+            <column name="idItem" />
+            <generator class="assigned" />
+        </id>
+        <property name="nama" type="string">
+            <column name="nama" length="45" not-null="true" />
+        </property>
+        <property name="jenis" type="byte">
+            <column name="jenis" not-null="true" />
+        </property>
+        <property name="stock" type="int">
+            <column name="stock" not-null="true" />
+        </property>
+        <property name="harga" type="int">
+            <column name="harga" not-null="true" />
+        </property>
+        <property name="urutan" type="byte">
+            <column name="urutan" not-null="true" />
+        </property>
+        <set name="transaksis" table="transaksi" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Item_idItem" not-null="true" />
+            </key>
+            <one-to-many class="com.Zalvi.entity.Transaksi" />
+        </set>
+    </class>
+</hibernate-mapping>

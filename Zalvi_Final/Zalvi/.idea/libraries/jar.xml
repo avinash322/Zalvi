@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jar/jasperreports-5.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jar/groovy-all-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jar/commons-digester-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jar/iText-2.1.7.js2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jar/commons-logging-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jar/poi-3.7-20101029.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jar/commons-collections-3.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
